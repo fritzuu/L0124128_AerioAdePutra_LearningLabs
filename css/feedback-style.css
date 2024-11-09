@@ -1,0 +1,134 @@
+/* General styles for the feedback page */
+body {
+    background-color: #fffaf1; /* Light background to contrast red */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .lfc-text {
+    color: #D10000; /* Liverpool FC red */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .animate-heading {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .lfc-img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lfc-subheading {
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .lfc-form {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensures the content area can grow */
+  }
+  
+  .lfc-label {
+    font-size: 1.1rem;
+    color: #D10000; /* Liverpool FC red */
+    font-weight: bold;
+  }
+  
+  .lfc-input {
+    border: 2px solid #D10000; /* Red border for input fields */
+    border-radius: 5px;
+  }
+  
+  .lfc-input:focus {
+    border-color: #bb0000; /* Darker red on focus */
+    box-shadow: 0 0 5px rgba(187, 0, 0, 0.6);
+  }
+  
+  .lfc-btn {
+    background-color: #D10000; /* Red button */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .lfc-btn:hover {
+    background-color: #bb0000; /* Darker red on hover */
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  
+  .lfc-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(187, 0, 0, 0.6);
+  }
+  
+  /* Footer positioning */
+  footer {
+    background-color: #c8102e; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background-color: #f1f1f1;
+    padding: 30px 0;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .testimonials h2 {
+    color: #D10000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .lfc-form {
+      padding: 15px;
+    }
+    .lfc-btn {
+      width: 100%;
+    }
+  
+    .testimonials .col-md-4 {
+      margin-bottom: 20px;
+    }
+  }
+  

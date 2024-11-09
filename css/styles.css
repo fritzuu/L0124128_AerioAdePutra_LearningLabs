@@ -1,0 +1,301 @@
+/* Hero Section dengan Background Image dan Overlay Gelap pada Gambar */
+.hero {
+    position: relative;
+    background-image: url('/img/index/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Full viewport height */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Overlay Gelap hanya pada Gambar */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);  /* Gelapkan gambar latar belakang */
+    z-index: 1;  /* Pastikan overlay berada di atas background, tapi di bawah teks */
+}
+
+/* Teks Hero tetap di atas overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Efek animasi pada teks di Hero Section */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out; /* Tambahkan animasi pada judul */
+}
+
+.hero .btn {
+    background-color: #ffc107;  /* Warna kuning untuk tombol */
+    color: #000; /* Warna teks tombol */
+    animation: fadeIn 3s ease-out 1s; /* Delay animasi tombol */
+}
+
+/* Animasi fade-in untuk teks dan tombol */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Penataan tambahan untuk navbar */
+.navbar {
+    background-color: #c8102e; /* Warna merah Liverpool */
+    padding: 15px 20px; /* Menambahkan padding untuk navbar */
+}
+
+/* Penataan tombol untuk navbar */
+.navbar .btn-primary {
+    background-color: #ffc107; /* Warna kuning untuk tombol */
+    border-color: #ffc107;
+}
+
+/* Footer yang lebih menarik */
+footer {
+    background-color: #222; /* Warna footer gelap */
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Pastikan footer berada di bawah */
+    font-size: 1rem; /* Ukuran font sedikit lebih kecil */
+    letter-spacing: 1px; /* Memberikan sedikit jarak antar huruf */
+    transition: background-color 0.3s ease; /* Efek transisi saat footer di-hover */
+}
+
+/* Efek hover pada footer */
+footer:hover {
+    background-color: #333; /* Memberikan efek hover pada footer */
+}
+
+/* CSS untuk gaya pemain */
+.top-scorers {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.top-scorers .card {
+    border: none;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.top-scorers .card:hover {
+    transform: translateY(-5px); /* Efek hover card pemain */
+}
+
+.top-scorers .player-number-box {
+    display: inline-block;
+    background-color: #c8102e; /* Warna merah khas Liverpool */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 8px 12px; /* Padding untuk memberi ruang pada teks */
+    border-radius: 8px; /* Membulatkan sudut */
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan */
+}
+
+.top-scorers .player-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px 0;
+    border: 3px solid #c8102e; /* Memberikan border pada gambar pemain */
+    transition: transform 0.3s ease;
+}
+
+.top-scorers .player-img:hover {
+    transform: scale(1.1); /* Efek zoom pada gambar pemain saat hover */
+}
+
+.top-scorers h5.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-scorers .btn-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-scorers .btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsif - Menyesuaikan ukuran teks dan padding pada layar kecil */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Mengurangi ukuran heading di layar kecil */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Mengurangi ukuran teks pada hero */
+    }
+
+    .hero .btn {
+        font-size: 1rem; /* Mengurangi ukuran tombol di layar kecil */
+    }
+
+    .carousel {
+        height: 300px; /* Mengurangi tinggi carousel pada layar kecil */
+    }
+
+    .top-scorers .card {
+        padding: 15px; /* Mengurangi padding pada kartu pemain */
+    }
+}
+
+/* Carousel */
+.carousel {
+    width: 100%; /* Pastikan lebar carousel mengikuti ukuran kontainer */
+    height: 800px; /* Menentukan tinggi yang sesuai */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Membuat carousel-inner memenuhi ukuran carousel */
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Membuat gambar di dalam carousel agar memenuhi area tanpa distorsi */
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;  /* Gambar akan mengisi lebar kontainer */
+    height: 100%; /* Gambar akan mengisi tinggi kontainer */
+    object-fit: cover; /* Menjaga aspek rasio gambar agar tidak terdistorsi */
+}
+
+/* Tombol navigasi carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Responsif - Menyesuaikan tinggi carousel pada layar kecil */
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px; /* Mengurangi tinggi carousel pada layar kecil */
+    }
+}
+
+.about-liverpool {
+    background-image: ('/img/index/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan untuk efek depth */
+}
+
+/* Efek Overlay pada background (lebih gelap) */
+.about-liverpool::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);  /* Menambah kegelapan pada overlay */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Styling untuk title */
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Styling untuk deskripsi */
+.section-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animasi fadeIn untuk teks */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek hover untuk bagian deskripsi */
+.about-liverpool:hover .section-description {
+    color: #ffc107; /* Warna kuning saat di-hover */
+    transition: color 0.3s ease;
+}
+
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem; /* Menyesuaikan ukuran font untuk layar kecil */
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liverpool Football Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Liverpool FC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="content.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Background Image -->
+  <section class="hero text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to Liverpool FC</h1>
+      <p class="lead">A club with a rich history, proud tradition, and a passionate fan base.</p>
+      <a href="content.html" class="btn btn-warning btn-lg">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="container my-5">
+    <section class="about-liverpool">
+        <div class="container">
+            <h2 class="section-title">Liverpool FC: The Reds</h2>
+            <p class="section-description">
+                Liverpool Football Club, founded in 1892, is one of the most successful football clubs in the world with a rich history and a dedicated fan base.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Photo Gallery Carousel -->
+    <div id="photoCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/index/imageindex3.jpg" class="d-block w-100" alt="Anfield Stadium">
+        </div>
+        <div class="carousel-item">
+          <img src="img/index/imageindex2.jpg" class="d-block w-100" alt="Liverpool Team">
+        </div>
+        <div class="carousel-item">
+          <img src="img/index/imageindex1.jpg" class="d-block w-100" alt="Liverpool Team Celebration">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Men's Top Scorers Section -->
+    <section class="top-scorers container my-5">
+      <h3 class="text-center mb-4">Men's Top Scorers</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <div class="player-number-box">7</div>
+              <img src="img/index/luizdiazimg.webp" alt="Luis Díaz" class="player-img">
+              <h5 class="card-title">Luis Díaz</h5>
+              <p class="card-text">Forward</p>
+              <p><strong>Season 2024-25</strong></p>
+              <p>Time Played: <strong>863</strong></p>
+              <p>Appearances: <strong>15</strong></p>
+              <p>Goals: <strong>9</strong></p>
+              <a href="#" class="btn btn-link">Buy Shirt</a>
+              <a href="#" class="btn btn-link">View Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <div class="player-number-box">11</div>
+              <img src="img/index/salahimg.webp" alt="Mohamed Salah" class="player-img">
+              <h5 class="card-title">Mohamed Salah</h5>
+              <p class="card-text">Forward</p>
+              <p><strong>Season 2024-25</strong></p>
+              <p>Time Played: <strong>1257</strong></p>
+              <p>Appearances: <strong>16</strong></p>
+              <p>Goals: <strong>9</strong></p>
+              <a href="#" class="btn btn-link">Buy Shirt</a>
+              <a href="#" class="btn btn-link">View Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <div class="player-number-box">18</div>
+              <img src="img/index/gakpoimg.webp" alt="Cody Gakpo" class="player-img">
+              <h5 class="card-title">Cody Gakpo</h5>
+              <p class="card-text">Forward</p>
+              <p><strong>Season 2024-25</strong></p>
+              <p>Time Played: <strong>807</strong></p>
+              <p>Appearances: <strong>16</strong></p>
+              <p>Goals: <strong>6</strong></p>
+              <a href="#" class="btn btn-link">Buy Shirt</a>
+              <a href="#" class="btn btn-link">View Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-danger text-white text-center py-3">
+    <p>Learning Labs 2024 NIM Nama Lengkap</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
